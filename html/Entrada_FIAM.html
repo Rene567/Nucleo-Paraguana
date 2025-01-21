@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="../css/style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-
+    
     <header>
         <img class="logo" src="../Imagenes/1.jpg" alt="logo">
         <button id="abrir" class="abrir-menu"><i class="bi bi-three-dots"></i></button>
@@ -20,7 +19,6 @@
                 <div class="profile-name" id="user-name">Nombre Usuario</div>
             </div>
             <ul class="nav-list">
-                <li><a href="#">Inscripción de Programa</a></li>
                 <li><a href="#">Carga de Notas</a></li>
                 <li><a href="#">Matricula Actual</a></li>
                 <li><a href="#">Material Académico</a></li>
@@ -43,7 +41,7 @@
 
             const logoutButton = document.querySelector('#logout-btn'); // Selección corregida
             logoutButton.addEventListener('click', () => {
-                window.location.href = "index.html"; // Reemplaza con la URL deseada
+                window.location.href = "../index.html"; // Reemplaza con la URL deseada
             });
 
         });
@@ -60,6 +58,16 @@
             nav.classList.remove("visible");
         });
     </script>
-    
+<body>
+    <style>
+        body {
+        background-image: url('../Imagenes/OSCyL-2019-2020.jpg.webp');
+        background-size: cover;
+        background-repeat: no repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    </style>
 </body>
+
 </html>

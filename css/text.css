@@ -37,6 +37,101 @@
     );
  }
 
+ .historia {
+   width: 520px;
+   height: 540px;
+   margin: 20px;
+   border: 2px solid #f0f0f010;
+   border-radius: 1rem;
+   background: #d9d9d910;
+   backdrop-filter: blur(0.4rem);
+   align-items: center;
+ }
+
+ .historia h1{
+   text-align: left;
+   margin-bottom: 2rem;
+ }
+
+ .historia_container {
+   width: auto;
+   height: 600px;
+   border: 2px solid #f0f0f010;
+   border-radius: 1rem;
+   margin-top: 2rem;
+   margin-bottom: 6rem;
+   margin-left: 1rem;
+   margin-right: 1rem;
+   background-image: url('../Imagenes/historia.jpeg');
+ }
+
+ .ubicacion {
+   width: 520px;
+   height: 540px;
+   margin: 20px;
+   border: 2px solid #f0f0f010;
+   border-radius: 1rem;
+   background: #d9d9d910;
+   backdrop-filter: blur(0.4rem);
+   align-items: center;
+   vertical-align: text-top;
+ }
+
+ .ubicacion h1{
+   text-align: left;
+   margin-bottom: 2rem;
+ }
+
+ .ubicacion_container {
+   width: auto;
+   height: 600px;
+   border: 2px solid #f0f0f010;
+   border-radius: 1rem;
+   margin-top: 2rem;
+   margin-bottom: 6rem;
+   margin-left: 1rem;
+   margin-right: 1rem;
+   background-image: url('../Imagenes/historia.jpeg');
+ }
+
+ .slider-box {
+   width: 100%; /* Ajuste para que el slider sea responsivo */
+   max-width: 1200px;
+   height: 500px; /* Altura fija para las imágenes */
+   margin: 50px auto 0;
+   margin-bottom: 200px;
+   overflow: hidden;
+   position: relative;
+   border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+
+.slider-box ul {
+   display: flex;
+   padding: 0;
+   width: calc(100% * 20); /* 20 es el número total de imágenes */
+   animation: slide 30s infinite;
+}
+
+
+.slider-box li {
+   width: 100%; /* Una imagen ocupa todo el ancho del contenedor */
+   height: 75%;
+   list-style: none;
+   flex-shrink: 0;
+}
+
+
+.slider-box img {
+   width: 256px;
+   height: 256px;
+   object-fit: cover; /* Mantiene las proporciones */
+}
+
+
+
+
+
  .menu {
     position: obsolute;
     top: 10px;
@@ -88,8 +183,18 @@
 
  h1 {
     text-align: center;
-    margin-top: 80px; 
+    margin-top: 0px; 
     display: block;
+ }
+
+ .transparent{
+   width: 800px;
+   height: auto;
+   border: 2px solid #fafafa10;
+   margin: auto 0;
+   border-radius: 1rem;
+   background: #fafafa10;
+   backdrop-filter: blur(0.4rem);
  }
 
  @media(max-width:991px) {

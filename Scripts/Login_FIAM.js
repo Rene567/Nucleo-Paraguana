@@ -1,5 +1,3 @@
-const loginForm = document.querySelector('#loginForm');
-
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -7,12 +5,18 @@ loginForm.addEventListener('submit', (e) => {
     const contraseña = document.querySelector('#contraseña').value.trim();
 
     const Users = JSON.parse(localStorage.getItem('users')) || [];
-    const validUser = Users.find(user => user.nombre === nombre && user.contraseña === contraseña && user.rol === "FIAM");
+    console.log('Usuarios registrados:', Users); // Para depuración
+
+    const validUser = Users.find(user => 
+        user.nombre.toLowerCase() === nombre.toLowerCase() &&
+        user.contraseña === contraseña &&
+        user.rol === "FIAM"
+    );
 
     if (!validUser) {
-        return alert('Usuario o contraseña incorrectos, o no tiene permisos para FIAM!');
+        return alert('Usuario o contraseña incorrectos.');
     }
 
-    alert(`Bienvenido FIAM ${validUser.nombre}`);
-    window.location.href = "Entrada_FIAM.html";
+    alert(`Bienvenido FIAM, ${validUser.nombre}`);
+    window.location.href = "../html/Entrada_FIAM.html";
 });

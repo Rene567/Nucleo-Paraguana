@@ -4,36 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Sistema Núcleo Paraguaná</title>
-    <link rel= "stylesheet" href="../css/text.css">
-    <link rel= "stylesheet" href="../css/StyleFIAM.css">
+    <link rel="stylesheet" href="../css/text.css">
+    <link rel="stylesheet" href="../css/StyleFIAM.css">
 </head>
 
-<header>
-    <div class="img-con">
-        <img src="../Imagenes/2.jpg" width="300px" alt="">
-    </div>
-   
-    <div class="content">
-        <div class="menu container">
-            <a href="../index.html" class="logo"><img src="../Imagenes/3.png" width="300pxpx" alt=""></a>
-            <input type="checkbox" id="menu" />
-            <label for="menu">
-                <img src="Imagenes/1.png" class="menu-icono" alt="">
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./FIAM.html">FIAM</a></li>
-                    <li><a href="./Contactos.html">Contactos</a></li>
-                    <li><a href="./Ubicación.html">Ubicación</a></li>
-                    <li><a href="./Nosotros.html">Nosotros</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
 <body>
+    <header>
+        <style>
+            .login_section {
+            background-image: url('../Imagenes/sesion8-scaled.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+           align-items: center;
+        }
+        </style>
+
+        <div class="img-con">
+            <img src="../Imagenes/2.jpg" width="300px" alt="">
+        </div>
+        <div class="content">
+            <div class="menu container">
+                <a href="../index.html" class="logo"><img src="../Imagenes/3.png" width="300px" alt=""></a>
+                <input type="checkbox" id="menu" />
+                <label for="menu">
+                    <img src="Imagenes/1.png" class="menu-icono" alt="">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./FIAM.html">FIAM</a></li>
+                        <li><a href="./De Interes.html">De Interes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
     <section class="login_section">
+        <div class="transparent">
         <div class="goku">
             <h1 class="centered">Estudiante</h1>
             <div class="vegueta">
@@ -47,27 +58,46 @@
 
                     <label for="email">Correo Electrónico:</label>
                     <input type="email" id="email" name="email" required>
-                    
+
                     <label for="contraseña">Contraseña:</label>
                     <input type="password" id="contraseña" name="contraseña" required>
 
                     <div id="estudianteFields">
-                        <br>
                         <h4>Encuesta para Estudiantes</h4>
-                        <label for="pregunta1">¿En qué Escuela o Programa (o ambos) esta inscrito?:</label>
-                        <input type="text" id="pregunta1" name="pregunta1">
+
+                        <label for="pregunta1">¿En qué Escuela o Programa (o ambos) está inscrito?:</label>
+                        <select id="pregunta1" name="pregunta1" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Programa Alma LLanera">Programa Alma Llanera</option>
+                            <option value="Programa Coral">Programa Coral</option>
+                            <option value="Escuela de Trompeta">Escuela de Trompeta</option>
+                        </select>
 
                         <label for="pregunta2">¿En qué nivel de Lenguaje Musical está?:</label>
-                        <input type="text" id="pregunta2" name="pregunta2">
+                        <select id="pregunta2" name="pregunta2" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Nivel 1">1er Nivel</option>
+                            <option value="Nivel 2">2do Nivel</option>
+                        </select>
+
+                        <div id="seccionContainer" style="display: none;">
+                            <label for="seccion">Seleccione la sección:</label>
+                            <select id="seccion" name="seccion" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="Sección A">Sección A</option>
+                                <option value="Sección B">Sección B</option>
+                            </select>
+                        </div>
                     </div>
+
                     <button type="submit">Registrarse</button>
                     <p><a href="./Estudiante sesion.html">Ya tengo cuenta</a></p>
                     <br>
-            </div>
+                    <br>
                 </form>
-        
+            </div>
+        </div>
         </div>
     </section>
 </body>
-<script src="../scripts/Register_FIAM.js"></script>
 </html>
