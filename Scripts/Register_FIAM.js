@@ -3,7 +3,6 @@ const nivelSelect = document.querySelector('#nivel');
 const seccionContainer = document.querySelector('#seccionContainer');
 const seccionSelect = document.querySelector('#seccion');
 
-// Mostrar/ocultar sección según el nivel seleccionado
 nivelSelect.addEventListener('change', () => {
     if (nivelSelect.value) {
         seccionContainer.classList.remove('hidden');
@@ -14,7 +13,6 @@ nivelSelect.addEventListener('change', () => {
     }
 });
 
-// Registro del formulario
 registerForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
