@@ -27,7 +27,6 @@ registerForm.addEventListener('submit', (e) => {
     const seccion = seccionSelect.value.trim();
     const rol = "FIAM";
 
-    // Verificar que el correo no exista previamente
     const Users = JSON.parse(localStorage.getItem('users')) || [];
     const isUserRegistered = Users.some(user => user.email === email);
 
@@ -35,11 +34,9 @@ registerForm.addEventListener('submit', (e) => {
         return alert('El usuario ya está registrado.');
     }
 
-    // Registrar nuevo usuario
     Users.push({ nombre, contraseña, email, cargo, asignaturas, nivel, seccion, rol });
     localStorage.setItem('users', JSON.stringify(Users));
     alert("Registro exitoso.");
 
-    // Redireccionar
     window.location.href = "../html/Entrada_FIAM.html";
 });
